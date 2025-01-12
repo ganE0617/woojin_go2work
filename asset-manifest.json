@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/woojin_go2work/static/css/main.03432c75.css",
-    "main.js": "/woojin_go2work/static/js/main.81f84f7a.js",
+    "main.js": "/woojin_go2work/static/js/main.2e6f0f6f.js",
     "static/js/488.9c92ff38.chunk.js": "/woojin_go2work/static/js/488.9c92ff38.chunk.js",
     "static/media/character.PNG": "/woojin_go2work/static/media/character.8ce11b3601ed4332271b.PNG",
     "static/media/obstacle1.PNG": "/woojin_go2work/static/media/obstacle1.d3e2f583f8395bcfc779.PNG",
     "static/media/obstacle2.png": "/woojin_go2work/static/media/obstacle2.4b9809d402d1d80b8880.png",
     "index.html": "/woojin_go2work/index.html",
     "main.03432c75.css.map": "/woojin_go2work/static/css/main.03432c75.css.map",
-    "main.81f84f7a.js.map": "/woojin_go2work/static/js/main.81f84f7a.js.map",
+    "main.2e6f0f6f.js.map": "/woojin_go2work/static/js/main.2e6f0f6f.js.map",
     "488.9c92ff38.chunk.js.map": "/woojin_go2work/static/js/488.9c92ff38.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.03432c75.css",
-    "static/js/main.81f84f7a.js"
+    "static/js/main.2e6f0f6f.js"
   ]
 }
