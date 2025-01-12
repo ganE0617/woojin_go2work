@@ -16,6 +16,7 @@ function App() {
     audio.volume = 0.5;
     return audio;
   });
+  const [speed, setSpeed] = useState(5);
 
   // 랜덤 장애물 선택
   const getRandomObstacle = useCallback(() => {
@@ -31,6 +32,15 @@ function App() {
       return () => clearInterval(scoreInterval);
     }
   }, [gameOver]);
+
+  // 점수에 따른 속도 증가 로직
+  useEffect(() => {
+    if (!gameOver) {
+      // 100점마다 속도 증가
+      const newSpeed = 5 + Math.floor(score / 100);
+      setSpeed(Math.min(newSpeed, 15)); // 최대 속도는 15로 제한
+    }
+  }, [score, gameOver]);
 
   // 충돌 감지 로직
   const checkCollision = useCallback(() => {
@@ -61,7 +71,7 @@ function App() {
             setCurrentObstacle(getRandomObstacle());
             return 600;
           }
-          return prevPosition - 5;
+          return prevPosition - speed;
         });
 
         if (checkCollision()) {
@@ -70,7 +80,7 @@ function App() {
       }, 20);
       return () => clearInterval(obstacleInterval);
     }
-  }, [gameOver, checkCollision, getRandomObstacle]);
+  }, [gameOver, checkCollision, getRandomObstacle, speed]);
 
   // 점프 로직
   const jump = useCallback(() => {
