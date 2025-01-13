@@ -2,7 +2,6 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ganE0617.github.io/woojin_go2work",
   "dependencies": {
     "cra-template": "1.2.0",
     "react": "^19.0.0",

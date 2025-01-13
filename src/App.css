@@ -1,31 +1,60 @@
+.game-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .game-container {
-  width: 600px;
-  height: 300px;
-  border: 2px solid #000;
-  margin: 20px auto 50px;
   position: relative;
-  overflow: hidden;
+  width: 800px;
+  height: 400px;
+  margin: 20px auto;
   background-color: white;
-  cursor: pointer;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-area {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  border: 2px solid #333;
+  border-radius: 10px;
 }
 
 .character {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
   left: 50px;
   transition: bottom 0.5s;
   z-index: 2;
   object-fit: contain;
+  image-rendering: pixelated;
 }
 
 .obstacle {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
   z-index: 1;
+  object-fit: contain;
+  image-rendering: auto;
+  display: block;
+}
+
+.obstacle img {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
@@ -92,4 +121,154 @@
   letter-spacing: 0px;
   text-shadow: none;
   margin-bottom: 30px;
+}
+
+.registration-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 20px;
+}
+
+.registration-form input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #333;
+  border-radius: 5px;
+}
+
+.registration-form button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.registration-form button:hover {
+  background-color: #555;
+}
+
+.leaderboard-toggle {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.leaderboard {
+  position: absolute;
+  right: -250px;
+  top: 50px;
+  width: 200px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 1.2em;
+}
+
+.leaderboard ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.leaderboard li {
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9em;
+}
+
+.leaderboard li:last-child {
+  border-bottom: none;
+}
+
+.error-message {
+  color: #ff3333;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.countdown-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.countdown {
+  font-size: 120px;
+  font-weight: bold;
+  color: #333;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.top-5-leaderboard {
+  width: 250px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  height: fit-content;
+}
+
+.top-5-leaderboard h3 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+}
+
+.top-5-leaderboard ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.top-5-leaderboard li {
+  padding: 5px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.top-5-leaderboard li:last-child {
+  border-bottom: none;
 }
